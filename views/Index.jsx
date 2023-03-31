@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import pokemon from "../models/pokemon";
 
 const myStyle = {
-  color: "whitesmoke",
-  backgroundColor: "#000000",
+  color: "black",
   "text-align": "center",
   "text-transform": "capitalize",
 };
@@ -16,10 +15,10 @@ export class Index extends Component {
         <ul>
           {pokemon.map((pokemon, id) => {
             return (
-              <div>
-                <h1>{pokemon.name}</h1>;
+              <div key={id}>
+                <h1>{pokemon.name}</h1>
                 <a href={`/pokemon/${id}`}>
-                  <img src={pokemon.img} alt={pokemon.name} />
+                  <img src={pokemon.img + ".jpg"} alt={pokemon.name} />
                 </a>
               </div>
             );
