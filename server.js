@@ -13,10 +13,12 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Pokemon App!");
 });
 
+// Index Route
 app.get("/pokemon", (req, res) => {
   res.render("Index", { pokemon: pokemon });
 });
 
+// Show Route
 app.get("/pokemon/:id", (req, res) => {
   res.send(req.params.id);
 });
